@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 25</title>
+</head>
+<body>
+    <script>
+    		let x = prompt('Введите число X:', ' только число');
+				if (isNaN(x)){
+					alert('Это не число');
+					document.getElementsByName("alert").reload(window.location.reload());
+				}
+			let y = prompt('Введите число Y:',' только число');
+				if (isNaN(y)){
+					alert('Это не число');	
+					document.getElementsByName("alert").reload(window.location.reload());
+				}
+				//let result = Math.pow(x, y);
+			let result = x;
+			let i = 2;
+				if(parseInt(y) === 0)
+					result = 1;
+				else if (parseInt(y) < 0){
+						for(let i = 0; i >= y; i--){
+							result = result * (1 / x);
+						}	
+					}
+					else 
+						while(i <= y){
+							result = result * x;
+							i++;
+						}
+						alert('Число ' + x + ' в степени ' + y + ' равно ' + result);
+
+    </script>
+</body>
+</html>

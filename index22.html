@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = window.prompt("Введите a");
+      if (isNaN(a)) {
+        alert("Введите цифры");
+        a = window.prompt("Введите a еще раз");
+      }
+      let b = window.prompt("Введите b");
+
+      if (isNaN(b)) {
+        alert("Введите цифры");
+        b = window.prompt("Введите b еще раз");
+      }
+      alert(((parseInt(a) + parseInt(a)) === parseInt(b)) ? "Значения равны" : "Значения не равны");
+    </script>
+  </body>
+</html>

@@ -8,17 +8,19 @@
   </head>
   <body>
     <script>
-      let a = window.prompt("Введите a");
-      if (isNaN(a)) {
+      let a = window.prompt("Введите a").trim();
+      
+      while(isNaN(a) || a === '') {
         alert("Введите цифры");
-        a = window.prompt("Введите a еще раз");
+        a = window.prompt("Введите a еще раз").trim();
       }
-      let b = window.prompt("Введите b");
+      let b = window.prompt("Введите b").trim();
 
-      if (isNaN(b)) {
+      while(isNaN(b) || b === '') {
         alert("Введите цифры");
-        b = window.prompt("Введите b еще раз");
+        b = window.prompt("Введите b еще раз").trim();
       }
+      
       alert(((parseInt(a) + parseInt(a)) === parseInt(b)) ? "Значения равны" : "Значения не равны");
     </script>
   </body>

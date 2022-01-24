@@ -10,7 +10,11 @@
     <script>
       let color = window
         .prompt("Введите цвет гриба (белый, желтый, красный, коричневый)", "")
-        .toLowerCase();
+        .toLowerCase().trim();
+        while (color ==="" || !isNaN(color))
+        color = window
+        .prompt("Введите цвет гриба (белый, желтый, красный, коричневый)", "")
+        .toLowerCase().trim();
       let skirt = confirm('"юбка" у гриба (Да/Нет)?');
       switch (color) {
         case "белый":

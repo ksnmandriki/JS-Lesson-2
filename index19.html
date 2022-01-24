@@ -19,8 +19,11 @@
         alert("Вводим только цифры");
         b = prompt("Введите b:", "значение переменной b");
       }
-      let result = Math.sqrt(a * b) < 4 ? "Мало" : "Много";
-      alert(result);
+      if (isNaN(Math.sqrt(parseInt(a) * parseInt(b))))
+          alert('отрицательное число');
+      else
+          alert((Math.sqrt(parseInt(a) * parseInt(b)) < 4) ? "Мало" : "Много");
+        //alert(Math.sqrt(parseInt(a) * parseInt(b)));
     </script>
   </body>
 </html>

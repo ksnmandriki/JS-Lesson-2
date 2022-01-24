@@ -8,20 +8,12 @@
   </head>
   <body>
     <script>
-      let a = window.prompt("Введите a").trim();
-      
-      while(isNaN(a) || a === '') {
-        alert("Введите цифры");
-        a = window.prompt("Введите a еще раз").trim();
-      }
-      let b = window.prompt("Введите b").trim();
-
-      while(isNaN(b) || b === '') {
-        alert("Введите цифры");
-        b = window.prompt("Введите b еще раз").trim();
-      }
-      
-      alert(((parseInt(a) + parseInt(a)) === parseInt(b)) ? "Значения равны" : "Значения не равны");
+      let a = window.prompt("Введите a");
+      let b = window.prompt("Введите b");
+      if (isNaN(a) == false && isNaN(b) == false)
+          alert (((+a + +a) == +b)? "Значения равны" : "Значения не равны");
+      else
+          alert(((a + a) == b) ? "Значения равны" : "Значения не равны");
     </script>
   </body>
 </html>

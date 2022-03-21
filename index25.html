@@ -9,40 +9,22 @@
   <body>
     <script>
       let x = prompt("Введите число X:", " только число").trim();
-      while (isNaN(x) || x === '') {
-        alert("Это не число");
-        document.getElementsByName("alert").reload(window.location.reload());
-      }
-      let y = prompt("Введите число Y:", " только число").trim();
-      while (isNaN(y) || y === '') {
-        alert("Это не число");
-        document.getElementsByName("alert").reload(window.location.reload());
-      }
-      //let result = Math.pow(x, y);
-      let result = x;
-      let i = 2;
-      if (x === '0' && y === '0')
-        result = "Не определен";
-      else
-        if(!Number.isInteger(x) || !Number.isInteger(y))
-          result = Math.pow(x, y);
-        else 
-          if (parseInt(x) === 0 && parseInt(y) <= 0)
-            result = "Не определен";
-          else 
-            if (parseInt(y) === 0 && parseFloat(x) != 0) 
-              result = 1;
-            else 
-              if (parseInt(y) < 0 && parseInt(x) != 0) {
-                for (let i = 0; i >= y; i--) {
-                  result = result * (1 / x);
-                }
-              } else 
-                  while (i <= y && parseInt(x) != 0) {
-                     result = result * x;
-                  i++;
-                }
+    while (isNaN(x) || x === '' || x.length > 10) {
+      alert("Это число выходит за рамки формата");
+      document.getElementsByName("alert").reload(window.location.reload());
+    }
+    let y = prompt("Введите число Y:", " только число").trim();
+    while (isNaN(y) || y === '' || y.length > 10) {
+      alert("Это число выходит за рамки формата");
+      document.getElementsByName("alert").reload(window.location.reload());
+    }
+    let result = Math.pow(x, y);
+
+    if (result == NaN || !isFinite(result))
+      alert("Число " + x + " в степени " + y + " слишком большой ");
+    else
       alert("Число " + x + " в степени " + y + " равно " + result);
+
     </script>
   </body>
 </html>
